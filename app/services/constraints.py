@@ -2,7 +2,7 @@ from app.config import config
 import requests
 from datetime import datetime, timedelta
 
-async def find_constrain_data(acn:str, acc: str):
+async def find_constrain_data(acn:str, acc: str, acg: str, acs: str):
     """Find data"""
     return build_query(acn=acn, acc=acc, line='a')
 
@@ -20,4 +20,4 @@ async def build_query(acn: str, acc: str, line: str):
 
 
 async def fetch_thanos_data(url: str):
-
+    ...
